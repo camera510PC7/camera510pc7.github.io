@@ -1,17 +1,14 @@
 body{
     margin:0;
+    background-color:#0B2161;
+    color:white;
 }
 
-a.menu:link {text-decoration:none; color: blue ;}
-a.menu:visited {text-decoration:none; color: blue ; }
-a.menu:hover {text-decoration:none; color: white ; background-color:blue; font-style:italic;}
-a.menu:active {text-decoration:none; color: white ; background-color:blue; font-style:italic;}
+a:link{text-decoration:underline;color:orange;}
+a:visited{text-decoration:underline;color:orange;}
 
-@keyframes Gradation {
-    0%{background-position:0% 50%}
-    50%{background-position:100% 50%}
-    100%{background-position:0% 50%}
-}
+a.sp_menu:link{text-decoration:none;color:orange;}
+a.sp_menu:visited{text-decoration:none;color:orange;}
 
 @font-face{
     font-family: RobotoSlab;
@@ -23,15 +20,21 @@ a.menu:active {text-decoration:none; color: white ; background-color:blue; font-
     src:url('../font/ShareTech-Regular.ttf')format('truetype');
 }
 
-body{
-    background:linear-gradient(45deg,rgba(171,255,255,0.8),rgba(255,171,255,0.8),rgba(255,255,171,0.8));
-    background-attachment: fixed;
-    background-size:600% 600%;
-    animation:Gradation 20s ease infinite;
-    min-height:300px;
-    width:100%;
-    min-width:300px;
-    margin:0;
+.sp_menu{
+    display:block;
+    padding:0.5em 1em;
+    text-decoration:none;
+    background:#f7f7f7;
+    border-right:solid 6px orange;
+    color:#ff7c5c;
+    font-weight:bold;
+    box-shadow:0px 2px 2px rgba(0,0,0,0.29);
+    margin-top:5px;
+    margin-bottom:5px;
+}
+.sp_menu:active{
+    box-shadow:inset 0 0 2px rgba(128,128,128,0.1);
+    transform:translateY(2px);
 }
 
 .sub_title{
@@ -42,13 +45,66 @@ body{
     opacity:0;
 }
 
-#profile_img{
+.margin{
+    padding-left:1em;
+}
+
+#content{
+    height: 100%;
+    min-height: 500px;
     display: block;
+}
+    
+#top{
+    height:100%;
+    display:table;
+    text-align: center;
+    margin:0 auto;
+}
+
+#back{
+display:none;
+}
+    
+#menu{
+display:none;
+}
+    
+#title{
+    font-family: 'RobotoSlab', serif;
+    position:relative;
+    width:auto;
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+}
+    
+#main_title{
+    font-size: 40px;
+}
+    
+#sub_title{
+    font-size: 30px;
+}
+
+#about{
+    position: relative;
+    text-align: center;
+}
+
+#profile_img{
+    text-align:center;
+    margin-bottom:15px;
+    border-radius:20px;
+    background-color:#CECEF6;
 }
 
 #profile{
     line-height:200%;
     display: inline-block;
+    /*/width:90%;/*/
+    margin-left:5%;
+    margin-right:5%;
 }
 
 #sns{
@@ -92,6 +148,21 @@ body{
     margin:2.5px;
 }
 
+#activity{
+    text-align: left;
+    display: inline-block;
+    vertical-align: top;
+    line-height:150%;
+}
+
+#contact-content_imput{
+    margin:0;
+}
+
+#errer{
+    text-align:left;
+}
+
 .page_name{
     font-family: ShareTech;
     font-size: 40px;
@@ -103,6 +174,7 @@ body{
     position:relative;
     display:inline-block;
     padding:0 55px;
+    text-align:center;
 }
 
 .heading:before,.heading:after{
@@ -112,7 +184,7 @@ body{
     display:inline-block;
     width:45px;
     height:1px;
-    background-color:black;
+    background-color:white
 }
 
 .heading:before{
@@ -147,10 +219,110 @@ body{
     cursor: pointer;
 }
 
+.modal_img{
+    display:none;
+}
+
+.works_img{
+        width:100%;
+        margin-top:10px;
+        margin-bottom:10px;
+}
+
+.works_description{
+    display:none;
+}
+
+#contact-content_imput{
+    width:100%;
+}
+
+#submit{
+    display:inline-block;
+    padding:0.5em 1em;
+    text-decoration:none;
+    background:white;
+    color:black;
+    border-bottom:solid 4px #627295;
+    border-radius:3px;
+}
+#submit:active{
+    -ms-transform:translateY(4px);
+    -webkit-transform:translateY(4px);
+    transform:translateY(4px);
+    border-bottom:none;
+}
+
+#submit:over{
+    -ms-transform:translateY(4px);
+    -webkit-transform:translateY(4px);
+    transform:translateY(4px);
+    border-bottom:none;
+    background:white;
+}
+
+#contact_form{
+    text-align:center;
+    margin:0 auto;
+    width:90%;
+    padding-bottom:100px;
+}
+    
+#name_imput{
+    border:0;
+    padding:10px;
+    font-size:1.3em;
+    font-family:Arial,sans-serif;
+    color:#aaa;
+    border:solid 1px #ccc;
+    margin:0 0 20px;
+    width:100%;
+}
+    
+#e-mail_imput{
+    border:0;
+    padding:10px;
+    font-size:1.3em;
+    font-family:Arial,sans-serif;
+    color:#aaa;
+    border:solid 1px #ccc;
+    margin:0 0 20px;
+    width:100%;
+}
+    
+#contact-content_imput{
+    border:0;
+    padding:10px;
+    font-size:1.3em;
+    font-family:Arial,sans-serif;
+    color:#aaa;
+    border:solid 1px #ccc;
+    margin:0 0 20px;
+    width:100%;
+    }
+
 @media all and (min-width:768px){
 
+a:link{text-decoration:underline; color:#0000EE;}
+a:visited{text-decoration:underline;color:#551A8B;}
+
+a.menu:link {text-decoration:none; color: white ;}
+a.menu:visited {text-decoration:none; color: white ; }
+a.menu:hover {text-decoration:none; color: white ; background-color:orange; font-style:italic;}
+a.menu:active {text-decoration:none; color: white ; background-color:orange; font-style:italic;}
+
+a.link:link{text-decoration:underline;color:orange;}
+a.link:visited{text-decoration:underline;color:orange;}
+
+    #hamburger{
+        display: none;
+    }
     
+    #content{
+        padding-left:240px;
+    }
     #back{
+        display:block;
         background-color:white;
         height:100%;
         min-height:300px;
@@ -161,6 +333,7 @@ body{
     }
     
     #menu{
+        display:block;
         font-family: 'RobotoSlab', serif;
         line-height: 125%;
         width:170px;
@@ -170,56 +343,20 @@ body{
         height: 100px;
         top:50%;
         margin-top:-90px;
-    }
-
-    #content{
-        height: 100%;
-        min-height: 500px;
-        padding-left:240px;
-        display: block;
+        text-align:center;
     }
     
-    #top{
-        height:100%;
-        display:table;
-        text-align: center;
-        margin:0 auto;
-    }
-    
-    #title{
-        font-family: 'RobotoSlab', serif;
-        position:relative;
-        width:auto;
-        display: table-cell;
-        vertical-align: middle;
-        text-align: center;
-    }
-    
-    #main_title{
-        font-size: 50px;
-    }
-    
-    #sub_title{
-        font-size: 40px;
-    }
-    
-   #about{
-        position: relative;
-        min-height:100%;
-        text-align: center;
+    #profile{
+        /*/width:100%;/*/
     }
     
     #activity{
-        text-align: left;
-        display: inline-block;
         padding-left: 50px;
-        vertical-align: top;
-        line-height:150%;
     }
     
     #works{
         position: relative;
-        height:100%;
+        /*height:100%;*/
         margin-top:60px;
         text-align: center;
     }
@@ -247,6 +384,7 @@ body{
     }
     
     .works_description{
+        display:inline;
         background-color:white;
         border-radius:20px;
         position:fixed;
@@ -258,15 +396,35 @@ body{
         display:none;
         padding-top:10px;
         text-align:center;
+        max-width: 800px;
+        max-height:100%;
+        overflow: hidden;
+        color:black;
     }
     
     .description_text{
         padding:10px 7px 10px 7px;
         text-align:left;
+        clear:both;
     }
     
+    .works_title{
+        text-align: center;
+        clear:both;
+    }
+    
+    .scroll{
+        display:inline-block;
+        position:relative;
+        overflow:scroll;
+        white-space:nowrap;
+        right:30px;
+    }
+
     .modal_img{
-        margin-bottom:10px;
+        position:relative;
+        margin-left:20px;
+        display:inline-block;
     }
     
     .close{
@@ -295,10 +453,27 @@ body{
         background:#000;
         cursor: pointer;
     }
-    
     #contact{
         position: relative;
         height:100%;
-        
+        text-align:center;
     }
+    
+    #contact_form{
+        text-align:left;
+        width:530px;
+    }
+    
+    #name_imput{
+        width:300px;
+    }
+    
+    #e-mail_imput{
+        width:300px;
+    }
+    
+    #contact-content_imput{
+        width:500px;
+    }
+    
 }
