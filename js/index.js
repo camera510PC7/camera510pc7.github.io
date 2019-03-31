@@ -28,7 +28,7 @@ window.onload=function(){
     
     $('.sub_title').css({'opacity':1});
     for (var i=0 ;i<=$('.sub_title').children().length ;i++){
-        $('.sub_title').children('span:eq('+i+')').delay(150*i).animate({'opacity':1},150);
+        $('.sub_title').children('span:eq('+i+')').delay(50*i).animate({'opacity':1},150);
     }
     
     $('.works_img').click(function(){

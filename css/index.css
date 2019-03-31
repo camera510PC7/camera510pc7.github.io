@@ -84,7 +84,7 @@ display:none;
 }
     
 #sub_title{
-    font-size: 30px;
+    font-size: 20px;
 }
 
 #about{
@@ -344,6 +344,10 @@ a.link:visited{text-decoration:underline;color:orange;}
         top:50%;
         margin-top:-90px;
         text-align:center;
+    }
+    
+    #sub_title{
+        font-size: 30px;
     }
     
     #profile{
